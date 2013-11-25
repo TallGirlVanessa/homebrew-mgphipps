@@ -23,6 +23,13 @@ class Adium < Formula
     ln_s 'Current', "#{prefix}/Adium.app/Contents/Frameworks/libintl.framework/Versions/8"
   end
 
+  def caveats; <<-EOS.undent
+    Be sure to install the SIPE plugin (discussed here: http://tuxtutorials.com/using-adium-1-5-4-with-office-communicator-2011).
+
+    It probably isn't available from that link anymore so you'll need to get it from the shared drive.
+    EOS
+  end
+
   test do
     # `test do` will create, run in and delete a temporary directory.
     #
