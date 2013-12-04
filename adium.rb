@@ -26,7 +26,7 @@ class Adium < Formula
   def caveats; <<-EOS.undent
     Be sure to install the SIPE plugin (discussed here: http://tuxtutorials.com/using-adium-1-5-4-with-office-communicator-2011).
 
-    It probably isn't available from that link anymore so you'll need to get it from the shared drive.
+    You can get it from http://sourceforge.net/projects/sipe/. Note that I had to re-create my Office Communicator account in Adium after upgrading the plugin, and I also uninstalled the old plugin first (from "Xtras Manager" in Adium).
 
     *Also, make sure you run `brew linkapps` so the update takes effect in your `/Applications`!*
     EOS
