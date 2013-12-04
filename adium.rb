@@ -2,13 +2,13 @@ require 'formula'
 
 class Adium < Formula
   homepage 'https://adium.im'
-  url 'https://hg.adium.im/adium/archive/7a7aed005b2b.tar.gz'
-  sha1 '35ba8de03db415639a8dd2a86e0a82ac9f9b96c4'
-  version '1.5.9-beta+7a7aed005b2b'
+  url 'https://adiumx.cachefly.net/adium-1.5.9.tgz'
+  sha1 '8c81bd1206d1d199fdfd5815d8cbf854c8c7146a'
+  version '1.5.9'
 
   def patches
     # fixes bug regarding SIPE plugin (http://sourceforge.net/p/sipe/bugs/216/)
-    "http://repo.or.cz/w/siplcs.git/blob_plain/HEAD:/contrib/adium-patches/adium-1.5.8-disable-ssl-mitigation.patch"
+    "http://repo.or.cz/w/siplcs.git/blob_plain/tags/1.17.2:/contrib/adium-patches/adium-1.5.8-disable-ssl-mitigation.patch"
   end
 
   def install
@@ -27,6 +27,8 @@ class Adium < Formula
     Be sure to install the SIPE plugin (discussed here: http://tuxtutorials.com/using-adium-1-5-4-with-office-communicator-2011).
 
     It probably isn't available from that link anymore so you'll need to get it from the shared drive.
+
+    *Also, make sure you run `brew linkapps` so the update takes effect in your `/Applications`!*
     EOS
   end
 
